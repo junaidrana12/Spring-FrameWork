@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util
+           https://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/context ">
+    <!-- Your beans go here -->
+    <!--    this is our beans-->
+
+    <bean class="SpringCoreAutoWiring.Address" name="address">
+
+        <property name="street" value="dayanand nagar street no - 5 "/>
+        <property name="city" value="meerut"/>
+    </bean>
+
+    <bean class="SpringCoreAutoWiring.Address" name="address1">
+        <property name="street" value="temp Street "/>
+        <property name="city" value="Delhi"/>
+    </bean>
+
+    <bean class="SpringCoreAutoWiring.Employee" name="emp1" autowire="byName">
+        <!-- we can inject by byname, byType , constructor   -->
+    </bean>
+
+
+</beans>

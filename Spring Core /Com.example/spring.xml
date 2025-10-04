@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    https://www.springframework.org/schema/context/spring-context.xsd
+">
+
+    <!-- Your beans go here -->
+
+    <!--    Primitive datatype-->
+
+    <!--    property injecting using p schema -->
+    <!--    but in this I has not use the p schema in above line -->
+    <!--    <bean class="com.example.Student" name="student1" p:studentId="2566" p:studentName="Junaid Khan" p:studentAddress="Noida"/>-->
+
+    <!--  property  injecting  using value as element and attribute-->
+
+    <bean class="com.example.Student" name="student1">
+        <!--        you can inject like this -->
+        <property  name="studentId" value="2344" />
+        <!--   this is inject as element     <value>2344</value>-->
+        <!--        </property>-->
+        <property name="studentName" value="Junaid Khan"/>
+        <!--            <value>Junaid Rana</value>-->
+        <!--        </property>-->
+        <property name="studentAddress" value="Noida"/>
+        <!--            <value>meerut</value>-->
+        <!--        </property>-->
+    </bean>
+
+</beans>
